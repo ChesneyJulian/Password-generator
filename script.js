@@ -7,6 +7,12 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   //  YOUR CODE HERE
 
+  var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?/>.<,:;!~+-()^{}[]*_";
+  let result = " ";
+  // var uppercase = "";
+  // var numbers = "";
+  // var sepcialChars = "";
+
   var passwordLength = prompt("How many characters would you like your password to contain?");
 
       if (passwordLength < 9) {
@@ -17,42 +23,22 @@ function generatePassword() {
 
         alert("Your password must be at least 8 characters and not exceed 128 characters.");
       
-      }  
-      
-  var passwordCriteria = {
+      }   else {
+        var  passwordCriteria = {
 
-      passwordLower: confirm("Would you like to include lowercase characters?"),
-
-      passwordUpper: confirm("Would you like to include uppercase characters?"),
-
-      passwordNumbers: confirm("Would you like to include numbers?"),
-
-      passwordSpecial: confirm("Would you like to include special characters?"),
-
-      // result: " "
-
-      }
-
-  var characters = {
-         lowercase: ("abcdefghijklmnopqrstuvwxyz") ,
-         uppercase: ("ABCDEFGHIJKLMNOPQRSTUVWXYZ") ,
-         numbers: ("0123456789") ,
-         sepcialChars: ("?/>.<,:;!~+-()^{}[]*_") }
-
-
-      if (passwordCriteria = true) {
-        generatePassword(passwordLength); {
-          for (var i = 0; i < length; i++) {
-            characters(Math.floor(Math.random()));
-          }
+      passwordLower : confirm("Would you like to include lowercase characters?"),
+      passwordUpper : confirm("Would you like to include uppercase characters?"),
+      passwordNumbers : confirm("Would you like to include numbers?"),
+      passwordSpecial : confirm("Would you like to include special characters?")
         }
       }
-      return;
-    
-      
-
-         
+   
+      for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * passwordLength));
       }
+     return;
+ } 
+
   // var random = 
 
   // var random = Math.floor(Math.random() * numbers.length);
