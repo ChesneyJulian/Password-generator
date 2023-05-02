@@ -56,7 +56,10 @@ if (includeSpecial == true) {
   chosenCharacters += characterSpecial;
 }
 
-alert("Possible characters chosen for random password generation: " + chosenCharacters);
+var launch = confirm("Possible characters chosen for random password generation: " + chosenCharacters + "\nClick 'OK' to launch generator.");
+  if (launch == false) {
+    return;
+  }
 
 // random password string generated and shown in output
 // referenced https://www.programiz.com/javascript/examples/generate-random-strings
