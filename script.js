@@ -12,10 +12,13 @@ var chosenCharacters = "";
 // prompt asking length requirement
 var pwLength = parseInt(prompt("How long would you like your password to be?"));
 // alerts if length is less than 8 or greater than 128
-  if (pwLength < 8 || pwLength > 128 ) {
+  if (pwLength < 8 || pwLength > 128) {
     alert("Password must contain at least 8 characters and no more than 128 characters.");
     return;
-  }
+  } else if (!pwLength) {
+    alert("Please input valid number.");
+    return;
+  } 
 
 // confirm asking to include lowercase
 var includeLower = confirm("Would you like to include lowercase characters?");
