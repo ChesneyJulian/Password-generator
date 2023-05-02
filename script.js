@@ -25,7 +25,6 @@ var includeLower = confirm("Would you like to include lowercase characters?");
 // if true, slice portion of characters containing lowercase and assign to new variable charactersLower; add assignment onto chosenCharacters
  if (includeLower == true) {
   var charactersLower = characters.slice(0, 26);
-  console.log(charactersLower);
   chosenCharacters += charactersLower;
  }
  
@@ -35,7 +34,6 @@ var includeUpper = confirm("Would you like to include uppercase characters?");
 // if true, slice portion of characters containing uppercase and assign charactersUpper; add assignment onto chosenCharacters
 if (includeUpper == true) {
   var charactersUpper = characters.slice(26, 52);
-  console.log (charactersUpper);
   chosenCharacters += charactersUpper;
 }
 
@@ -45,7 +43,6 @@ var includeNum = confirm("Would you like to include numbers?");
 // if true, slice portion of characters containing numbers and assign charactersNum; add assignment onto chosenCharacters
 if (includeNum == true) {
   var charactersNum = characters.slice(52, 62);
-  console.log (charactersNum);
   chosenCharacters += charactersNum;
 }
 
@@ -55,12 +52,11 @@ var includeSpecial = confirm("Would you like to include special characters?");
 // if true, slice portion of characters containing special characters and assign characterSpecial; add assignment onto chosenCharacters
 if (includeSpecial == true) {
   var characterSpecial = characters.slice(62, characters.length);
-  console.log(characterSpecial);
   chosenCharacters += characterSpecial;
 }
 
 // console.log chosenCharacters to verify user changes have beeen stored for each prompt
-console.log(chosenCharacters);
+console.log("Possible Characters: " + chosenCharacters);
 
 // random password string generated and shown in output
 // referenced https://www.programiz.com/javascript/examples/generate-random-strings
