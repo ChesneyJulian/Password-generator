@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   //  YOUR CODE HERE
-
+var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#[]/?-$*%" ;
 // objectives:
 // prompt asking length requirement
 var pwLength = parseInt(prompt("How long would you like your password to be?"));
@@ -16,10 +16,13 @@ var pwLength = parseInt(prompt("How long would you like your password to be?"));
   }
 // confirm asking to include lowercase
 var includeLower = confirm("Would you like to include lowercase characters?");
+
 // confirm asking to include uppercase
 var includeUpper = confirm("Would you like to include uppercase characters?");
+
 // confirm asking to include numbers
 var includeNum = confirm("Would you like to include numbers?");
+
 // confirm asking to include special characters
 var includeSpecial = confirm("Would you like to include special characters?");
 
@@ -27,30 +30,24 @@ var includeSpecial = confirm("Would you like to include special characters?");
 // random password string generated and shown in output
 // use if statements to slice characters from string according to confirm data
 
-var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#[]/?-$*%";
-
-console.log(characters);
 
 
+// referenced https://www.programiz.com/javascript/examples/generate-random-strings
+var charactersLength = characters.length;
+var result = '';
+var length = pwLength;
+for (let i = 0; i < length; i++) {
+  result +=
+  characters.charAt(Math.floor(Math.random() * charactersLength));
 
-var random = Math.floor(Math.random() * characters.length);
-var output = characters[random] * pwLength;
-console.log(output);
+  
+}
+return result;
 
 
 
   }  
    
-
-
- 
-
-
-
-  // var random = 
-
-  // var random = Math.floor(Math.random() * numbers.length);
-  // return;
 
 
 // Write password to the #password input
