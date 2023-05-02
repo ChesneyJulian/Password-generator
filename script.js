@@ -13,11 +13,11 @@ function generatePassword() {
 
   // prompt asking length requirement
   var pwLength = parseInt(prompt("How long would you like your password to be?"));
-  // alerts if length is less than 8 or greater than 128
+  // alerts if length is less than 8 or greater than 128 and returns empty string
     if (pwLength < 8 || pwLength > 128) {
       alert("Password must contain at least 8 characters and no more than 128 characters.");
       return "";
-      // alerts if cancel or non-numerical characters are entered
+      // alerts if cancel or non-numerical characters are entered and returns empty string 
     } else if (!pwLength) {
       alert("Please input valid number.");
       return "";
@@ -58,6 +58,7 @@ function generatePassword() {
     chosenCharacters += characterSpecial;
   }
 
+  // give alert and return empty string if all include confirms are false 
   if (includeLower == false && includeUpper == false && includeNum == false && includeSpecial == false) {
     alert("Please choose at least one character type.");
     return "";
@@ -69,11 +70,10 @@ function generatePassword() {
   // password generation below
   // referenced https://www.programiz.com/javascript/examples/generate-random-strings
 
-  // set var result as an empty string
+  // assign var result as an empty string
   var result = '';
 
   // create for loop that runs length assigned by user input in first prompt
-
   for (var i = 0; i < pwLength; i++) {
     // add existing data for result variable to the math.random function using characters from the chosenCharacters variable and chosenCharacters as length parameter
     result += chosenCharacters.charAt(Math.floor(Math.random() * chosenCharacters.length));
