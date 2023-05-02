@@ -59,18 +59,15 @@ if (includeSpecial == true) {
   chosenCharacters += characterSpecial;
 }
 
-var launch = confirm("Possible characters chosen for random password generation: " + chosenCharacters + "\nClick 'OK' to launch generator.");
-  if (launch == false) {
-    return;
-  }
+// console.log chosenCharacters to verify user changes have beeen stored for each prompt
+console.log(chosenCharacters);
 
 // random password string generated and shown in output
 // referenced https://www.programiz.com/javascript/examples/generate-random-strings
 
 var result = '';
 for (let i = 0; i < pwLength; i++) {
-  result +=
-  chosenCharacters.charAt(Math.floor(Math.random() * chosenCharacters.length));
+  result += chosenCharacters.charAt(Math.floor(Math.random() * chosenCharacters.length));
 }
 return result;
 
