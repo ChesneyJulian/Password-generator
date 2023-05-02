@@ -58,6 +58,11 @@ function generatePassword() {
     chosenCharacters += characterSpecial;
   }
 
+  if (includeLower == false && includeUpper == false && includeNum == false && includeSpecial == false) {
+    alert("Please choose at least one character type.");
+    return "";
+  }
+  
   // console.log chosenCharacters to verify user changes have beeen stored for each prompt
   console.log("Possible Characters: " + chosenCharacters);
 
