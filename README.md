@@ -2,11 +2,12 @@
 
 ## Description
 
-This project's goal was to alter code to add functionality for a random password generator application . This was accomplished by adding a function to the preexisting javascript code called "generatePassword". This function accomplished the following directives: 
-- when generate password button is clicked, a series of prompts and confirms begins to collect password criteria data from the user
+This project's goal was to alter code to add functionality for a random password generator application . This was accomplished by adding a function called "generatePassword" to the preexisting javascript code. This function accomplished the following directives: 
+- when the generate password button is clicked, a series of prompts and confirms begins to collect password criteria data from the user
 - when invalid data is returned to the prompt inquiring password length, an alert is shown informing the user to use proper data
 - when confirms are true, the characters in question are added to a variable of possible characters for the password
-- when all prompts and confirms have been answered, a password appears in the text box that is randomly generated using the user's inputs
+- when all prompts and confirms have been answered, a math.random function generates a random password using characters and length dictated by the user's input
+- the generated password appears in the textbox on the screen
 
 ## Deployed Application
 
