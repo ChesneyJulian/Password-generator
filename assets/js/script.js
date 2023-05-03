@@ -72,7 +72,6 @@ function generatePassword() {
 
   // assign var result as an empty string
   var result = '';
-
   // create for loop that runs length assigned by user input in first prompt
   for (var i = 0; i < pwLength; i++) {
     // add existing data for result variable to the math.random function using characters from the chosenCharacters variable and chosenCharacters as length parameter
